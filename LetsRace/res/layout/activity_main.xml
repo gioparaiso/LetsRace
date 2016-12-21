@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" >
+
+    <ImageView
+        android:id="@+id/letsrace_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:alpha="0.35"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:src="@drawable/letsracelogo" />
+
+    <TextView
+        android:id="@+id/txtviewResponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCheckWifi"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txtview_response" />
+
+    <!--
+    <EditText
+        android:id="@+id/edittxtAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edittxtPort"
+        android:layout_centerHorizontal="true"
+        android:text="@string/edittxt_address" />
+
+    <EditText
+        android:id="@+id/edittxtPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonConnect"
+        android:layout_centerHorizontal="true"
+        android:text="@string/edittxt_port1" />
+
+    <Button
+        android:id="@+id/buttonConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonClear"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_connect" />
+    -->
+
+    <Button
+        android:id="@+id/btnCheckWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAccel"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_CheckWifiServer" />
+
+    <Button
+        android:id="@+id/btnAccel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_about"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_accel" />
+
+    <!--
+    <Button
+        android:id="@+id/button_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_touch"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_button" />
+    
+    <Button
+        android:id="@+id/button_touch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/btn_touch" />
+    
+    <Button
+        android:id="@+id/button_mcu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_touch"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_mcu" />
+    -->
+
+    <Button
+        android:id="@+id/button_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/letsrace_logo"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_about" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20sp"
+        android:text="@string/app_name_version"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/photocar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:alpha="0.35"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:src="@drawable/photocar" />
+
+</RelativeLayout>

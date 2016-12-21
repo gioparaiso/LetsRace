@@ -1,0 +1,63 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.letsrace"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:icon="@drawable/launcherlogo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.letsrace.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.letsrace.ActivityAccelerometer"
+            android:label="@string/title_activity_accelerometer"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.letsrace.SetPreferenceActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="landscape" >
+        </activity>
+        <!-- 
+        <activity
+            android:name="ActivityMCU"
+            android:label="@string/title_activity_mcu"
+            android:screenOrientation="landscape" >
+        </activity>
+         -->
+        <activity
+            android:name="ActivityAbout"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="landscape" >
+        </activity>
+        <!-- 
+        <activity
+            android:name="ActivityReady"
+            android:label="@string/title_activity_ready"
+            android:screenOrientation="landscape" >
+        </activity>
+         -->
+        </application>
+
+</manifest>
