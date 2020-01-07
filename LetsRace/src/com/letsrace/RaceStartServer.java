@@ -15,6 +15,7 @@ public class RaceStartServer {
 	ServerSocket serverSocket;
 	String message = "";
 	// static final int socketServerPORT = 1110;
+	// just the initial port, it will still get port from parameter
 	int socketServerPORT = 1110;
 
 	public RaceStartServer(ActivityAccelerometer activity, int port) {

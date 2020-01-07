@@ -1,119 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<PreferenceScreen
-	xmlns:android="http://schemas.android.com/apk/res/android">
-            
-	<PreferenceCategory
- 		android:key="pref_General"
- 		android:title="Общие настройки"
- 		android:summary="Общие настройки">
-	
-		<EditTextPreference
-			 android:key="pref_MAC_address"
-			 android:title="MAC адрес"
-			 android:summary="MAC-адрес Bluetooth устройства"
-			 android:defaultValue="@+string/default_bluetooth" />
-		
-		<EditTextPreference
-			 android:key="pref_commandLeft"
-			 android:title="Команда для левого двигателя"
-			 android:summary="Символ команды для левого двигателя"
-			 android:defaultValue="@+string/default_commandLeft" />
-			
-		<EditTextPreference
-			 android:key="pref_commandRight"
-			 android:title="Команда для правого двигателя"
-			 android:summary="Символ команды для правого двигателя"
-			 android:defaultValue="@+string/default_commandRight" />
-		
-		<EditTextPreference
-			 android:key="pref_commandHorn"
-			 android:title="Дополнительная команда"
-			 android:summary="Символ дополнительной команды (к примеру звуковой сигнал)"
-			 android:defaultValue="@+string/default_commandHorn" />
-		
-		<EditTextPreference
-			 android:key="pref_commandForward"
-			 android:title="Forward"
-			 android:summary="Forward summary"
-			 android:defaultValue="@+string/default_commandForward" />
-		
-		<CheckBoxPreference
-			android:key="pref_Debug"
-			android:title="Отладочная информация"
-			android:summary="Отображение отладочной информации"
-			android:defaultValue="false" />
-		
-	</PreferenceCategory>
-	
-	<PreferenceCategory
- 		android:key="pref_Accel"
- 		android:title="Параметры при управлении от акселерометра"
- 		android:summary="Параметры при управлении от акселерометра">
-	
-		<EditTextPreference
-			 android:key="pref_xMax"
-			 android:title="Предел по оси X"
-			 android:summary="Предел наклона (чувствительность) по оси X"
-			 android:defaultValue="@+string/default_xMax" />
-	
-		<EditTextPreference
-			 android:key="pref_xR"
-			 android:title="Точка разворота для мотора (ось X)"
-			 android:summary="Точка разворота для мотора по оси X, выше которой один мотор начинает вращаться в другую сторону"
-			 android:defaultValue="@+string/default_xR" />
-		
-		<EditTextPreference
-			 android:key="pref_yMax"
-			 android:title="Предел по оси Y"
-			 android:summary="Предел наклона (чувствительность) по оси Y"
-			 android:defaultValue="@+string/default_yMax" />
-		
-		<EditTextPreference
-			 android:key="pref_yThreshold"
-			 android:title="Минимальное значение ШИМ"
-			 android:summary="Минимальное значение ШИМ (порог ниже которого не вращается двигатель)"
-			 android:defaultValue="@+string/default_yThreshold" />	
-			 
-		<EditTextPreference
-			 android:key="pref_pwmMax"
-			 android:title="Максимальное значение ШИМ"
-			 android:summary="Максимальное значение ШИМ (для Arduino 255)"
-			 android:defaultValue="@+string/default_pwmMax" />	
-		 
-	</PreferenceCategory>
-	
-	<PreferenceCategory
- 		android:key="pref_Buttons"
- 		android:title="Параметры при управлении от экранных кнопок"
- 		android:summary="Параметры при управлении от экранных кнопок">
-		 
-		<EditTextPreference
-			 android:key="pref_pwmBtnMotorLeft"
-			 android:title="Значение ШИМ при кнопочном управлении (левый)"
-			 android:summary="Постоянное значение ШИМ при кнопочном управлении для левого двигателя"
-			 android:defaultValue="@+string/default_pwmBtnMotorLeft" />
-		
-		<EditTextPreference
-			 android:key="pref_pwmBtnMotorRight"
-			 android:title="Значение ШИМ при кнопочном управлении (правый)"
-			 android:summary="Постоянное значение ШИМ при кнопочном управлении для правого двигателя"
-			 android:defaultValue="@+string/default_pwmBtnMotorRight" />
-		
-	</PreferenceCategory>
-	
-	<PreferenceCategory
- 		android:key="pref_Touch"
- 		android:title="Параметры при управлении от тача"
- 		android:summary="Параметры при управлении от тача">
-		 
-		<EditTextPreference
-			 android:key="pref_xRperc"
-			 android:title="Точка разворота для мотора по оси X (в процентах)"
-			 android:summary="Точка разворота для мотора по оси X, выше которой один мотор начинает вращаться в другую сторону"
-			 android:defaultValue="@+string/default_xRperc" />
-				
-	</PreferenceCategory>
-	
-			
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="pref_General"
+        android:summary="General settings"
+        android:title="General settings">
+        <EditTextPreference
+            android:id="@+id/btMacAddress"
+            android:defaultValue="@string/default_bluetooth"
+            android:key="pref_MAC_address"
+            android:summary="MAC-address of Bluetooth module"
+            android:title="MAC address" />
+        <EditTextPreference
+            android:id="@+id/wifiServerAddress"
+            android:defaultValue="@string/default_WiFiServer"
+            android:key="pref_WiFiServer_address"
+            android:summary="IP Address of WiFi Server"
+            android:title="WiFi Server address" />
+        <EditTextPreference
+            android:id="@+id/playerPort"
+            android:defaultValue="@string/default_WiFiServerPort"
+            android:key="pref_WiFiServer_port"
+            android:summary="Port used for WiFi Server"
+            android:title="This Player's Port used" />
+        <EditTextPreference
+            android:id="@+id/wifiServerPort"
+            android:defaultValue="@string/default_RaceServerPort"
+            android:key="pref_RaceServer_port"
+            android:summary="Port used for Race Server"
+            android:title="Server Port" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_Debug"
+            android:summary="Show debug information"
+            android:title="Debug info" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_Steering"
+        android:summary="Fine tune steering"
+        android:title="Fine tune steering">
+
+        <EditTextPreference
+            android:id="@+id/centerPosition"
+            android:defaultValue="@string/default_CenterPosition"
+            android:key="pref_CenterPosition"
+            android:summary="Center position of steering"
+            android:title="Center position of steering (-5 to +5)"
+            android:inputType="numberSigned" />
+        <EditTextPreference
+            android:id="@+id/centerRange"
+            android:defaultValue="@string/default_CenterRange"
+            android:key="pref_CenterRange"
+            android:summary="Center range of steering"
+            android:title="Center range of steering (0 to 10)" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

@@ -61,9 +61,7 @@ public class cBluetooth {
 			try {
 				final Method m = device.getClass().getMethod(
 						"createInsecureRfcommSocketToServiceRecord",
-						new Class[] { UUID.class
-
-						});
+                        UUID.class);
 				return (BluetoothSocket) m.invoke(device, MY_UUID);
 			} catch (Exception e) {
 				Log.e(TAG, "Could not create Insecure RFComm Connection", e);

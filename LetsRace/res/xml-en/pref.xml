@@ -1,35 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
         android:key="pref_General"
         android:summary="General settings"
-        android:title="General settings" >
+        android:title="General settings">
         <EditTextPreference
-            android:defaultValue="@+string/default_bluetooth"
+            android:defaultValue="@string/default_bluetooth"
             android:key="pref_MAC_address"
             android:summary="MAC-address of Bluetooth module"
             android:title="MAC address" />
         <EditTextPreference
-            android:defaultValue="@+string/default_WiFiServer"
+            android:defaultValue="@string/default_WiFiServer"
             android:key="pref_WiFiServer_address"
             android:summary="IP Address of WiFi Server"
             android:title="WiFi Server address" />
         <EditTextPreference
-            android:defaultValue="@+string/default_WiFiServerPort"
+            android:defaultValue="@string/default_WiFiServerPort"
             android:key="pref_WiFiServer_port"
             android:summary="Port used for WiFi Server"
-            android:title="WiFi Server Port" />
+            android:title="This Player's Port used" />
         <EditTextPreference
-            android:defaultValue="@+string/default_RaceServerPort"
+            android:defaultValue="@string/default_RaceServerPort"
             android:key="pref_RaceServer_port"
             android:summary="Port used for Race Server"
-            android:title="Race Server Port" />
+            android:title="Server Port" />
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="pref_Debug"
             android:summary="Show debug information"
             android:title="Debug info" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_Steering"
+        android:summary="Fine tune steering"
+        android:title="Fine tune steering">
+
+        <EditTextPreference
+            android:defaultValue="@string/default_CenterPosition"
+            android:key="pref_CenterPosition"
+            android:summary="Center position of steering"
+            android:title="Center position of steering (-5 to +5)" />
+        <EditTextPreference
+            android:defaultValue="@string/default_CenterRange"
+            android:key="pref_CenterRange"
+            android:summary="Center range of steering"
+            android:title="Center range of steering (0 to 10)" />
     </PreferenceCategory>
 
 </PreferenceScreen>
